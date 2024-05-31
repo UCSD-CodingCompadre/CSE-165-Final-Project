@@ -74,8 +74,8 @@ public class S_SceneManager : MonoBehaviour
      */
     public void SetMessageBoardText(string Text)
     {
-
-        CurrentUIElement.GetComponent<TextMeshProUGUI>().text = Text;
+        
+        CurrentUIElement.GetComponentInChildren<TextMeshProUGUI>(false).text = Text;
     }
 
     /*
