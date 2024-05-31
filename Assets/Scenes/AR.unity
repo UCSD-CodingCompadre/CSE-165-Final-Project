@@ -2526,6 +2526,7 @@ MonoBehaviour:
   RigCameraOffset: {fileID: 1733789416}
   MessageBoardPrefab: {fileID: 5637070586481002716, guid: 465f81466edf11449a07dcdb465b1e13,
     type: 3}
+  Jeff: {fileID: 0}
   Scanner: {fileID: 6238286918167281787, guid: afae851aaf33c8642b9335d44f159258, type: 3}
 --- !u!4 &553125861
 Transform:
