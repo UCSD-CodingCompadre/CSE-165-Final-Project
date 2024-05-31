@@ -10,9 +10,9 @@ public class S_ItemSpawnerManager : MonoBehaviour
     /*
      * @brief Spawn the object at the SpawnPoint
      * @param GameObject Prefab the object being spawned
-     * @return void
+     * @return GameObject
      */
-    public void SpawnObjectAtTransform(GameObject Prefab)
+    public GameObject SpawnObjectAtTransform(GameObject Prefab)
     {
 
         // Check if there is a spawn point and prefab
@@ -20,7 +20,10 @@ public class S_ItemSpawnerManager : MonoBehaviour
         {
 
             // Instantiate the prefab at the position and rotation of the spawn point
-            Instantiate(Prefab, SpawnPoint.position, SpawnPoint.rotation);
+            return Instantiate(Prefab, SpawnPoint.position, SpawnPoint.rotation);
         }
+
+        // Else return null
+        return null;
     }
 }

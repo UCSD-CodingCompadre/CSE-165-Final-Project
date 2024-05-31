@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class S_WayfindingManager : MonoBehaviour
 {
+
     // Hold the active checkpoint
     private GameObject ActiveObjective;
 
