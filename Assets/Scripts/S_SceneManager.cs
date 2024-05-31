@@ -82,44 +82,9 @@ public class S_SceneManager : MonoBehaviour
      */
     public void SetMessageBoardText(string Text)
     {
-<<<<<<< Updated upstream
-        
-        CurrentUIElement.GetComponentInChildren<TextMeshProUGUI>(false).text = Text;
-    }
-
-    /*
-     * @brief Destroy the current UIElement
-     * @param none
-     * @return void
-     */
-    public void DestroyCurrentUIElement()
-    {
-
-        // Destroy the UI element
-        Destroy(CurrentUIElement);
-
-        // Set to null
-        CurrentUIElement = null;
-    }
-
-    /*
-     * @brief Destroy the current objective
-     * @param none
-     * @return void
-     */
-    public void DestroyCurrentObjective()
-    {
-
-        // Destroy the current objective
-        Destroy(CurrentObjective);
-
-        // Set to null
-        CurrentObjective = null;
-=======
 
         // Set the text for MessageBoard
         MessageBoard.GetComponent<TextMeshProUGUI>().text = Text;
->>>>>>> Stashed changes
     }
 
     /*
