@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class S_SymptomButtonManager : MonoBehaviour
 {
@@ -37,27 +38,65 @@ public class S_SymptomButtonManager : MonoBehaviour
         // Set the Image component
         ButtonImage = GetComponent<Image>();
         
-        interactor = GetComponent<XRDirectInteractor>();
+        // Set the XRDirectInteractor component
+        DirectInteractor = GetComponent<XRDirectInteractor>();
     }
 
+    /*
+     * @brief OnPointerEnter check if the button is not selected and show the
+     * hovered color
+     * @param none
+     * @return void
+     */
     public void OnPointerEnter()
     {
-        if (!isSelected)
-            buttonImage.color = hoveredColor;
-    }
 
-    public void OnPointerExit()
-    {
-        if (!isSelected)
-            buttonImage.color = defaultColor;
-    }
-
-    public void OnSelectEntered(SelectEnterEventArgs args)
-    {
+        // Check if the button is not selected
         if (!isSelected)
         {
-            isSelected = true;
-            buttonImage.color = selectedColor;
+
+            // Change the Image color
+            ButtonImage.color = HoveredColor;
+        }
+    }
+
+    /*
+     * @brief OnPointerExit check if the button is not selected and show the
+     * default color
+     * @param none
+     * @return void
+     */
+    public void OnPointerExit()
+    {
+
+        // Check if the button is not selected
+        if (!isSelected)
+        {
+
+            // Change the Image color
+            ButtonImage.color = DefaultColor;
+        }
+    }
+
+    /*
+     * @brief OnSelectEntered check if the button is selected or not
+     * and add or remove the symptom from the SymptomManager script
+     * @param SelectEnterEventArgs args the arguements for the SelectEnter event
+     * @return void
+     */
+    public void OnSelectEntered(SelectEnterEventArgs args)
+    {
+
+        // Check if the button has not been selected
+        if (!isSelected)
+        {
+
+            // Set IsSelected to true
+            IsSelected = true;
+
+            // Change the Image color 
+            buttonImage.color = SelectedColor;
+
             // Send selected symptom to Canvas script
             GameObject canvas = GameObject.Find("Canvas");
             if (canvas != null)
