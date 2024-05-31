@@ -34,11 +34,11 @@ public class S_SymptomCanvasManager : MonoBehaviour
     {
 
         // Check if the list does not have the symptom
-        if (selectedSymptoms.Contains(Symptom))
+        if (SelectedSymptoms.Contains(Symptom))
         {
 
             // Remove the symptom from the list
-            selectedSymptoms.Remove(Symtpom);
+            SelectedSymptoms.Remove(Symptom);
         }
     }
 }

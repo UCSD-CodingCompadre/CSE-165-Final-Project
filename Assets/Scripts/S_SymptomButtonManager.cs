@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class S_SymptomButtonManager : MonoBehaviour
@@ -52,7 +53,7 @@ public class S_SymptomButtonManager : MonoBehaviour
     {
 
         // Check if the button is not selected
-        if (!isSelected)
+        if (!IsSelected)
         {
 
             // Change the Image color
@@ -70,7 +71,7 @@ public class S_SymptomButtonManager : MonoBehaviour
     {
 
         // Check if the button is not selected
-        if (!isSelected)
+        if (!IsSelected)
         {
 
             // Change the Image color
@@ -88,32 +89,25 @@ public class S_SymptomButtonManager : MonoBehaviour
     {
 
         // Check if the button has not been selected
-        if (!isSelected)
+        if (!IsSelected)
         {
 
             // Set IsSelected to true
             IsSelected = true;
 
             // Change the Image color 
-            buttonImage.color = SelectedColor;
-
-            // Send selected symptom to Canvas script
-            GameObject canvas = GameObject.Find("Canvas");
-            if (canvas != null)
-            {
-                canvas.GetComponent<CanvasScript>().AddSelectedSymptom(symptomName);
-            }
+            ButtonImage.color = SelectedColor;
         }
+
+        // Else the button is selected
         else
         {
-            isSelected = false;
-            buttonImage.color = defaultColor;
-            // Remove selected symptom from Canvas script
-            GameObject canvas = GameObject.Find("Canvas");
-            if (canvas != null)
-            {
-                canvas.GetComponent<CanvasScript>().RemoveSelectedSymptom(symptomName);
-            }
+
+            // Set IsSelected to false
+            IsSelected = false;
+
+            // Change the Image color
+            ButtonImage.color = DefaultColor;
         }
     }
 }
