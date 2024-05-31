@@ -367,6 +367,7 @@ GameObject:
   - component: {fileID: 5009211730862540637}
   - component: {fileID: 4563701584835190818}
   - component: {fileID: 1676049110367378067}
+  - component: {fileID: 2738878629577979934}
   m_Layer: 0
   m_Name: Done
   m_TagString: Untagged
@@ -391,7 +392,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.7}
+  m_AnchoredPosition: {x: 0, y: -0.8}
   m_SizeDelta: {x: 0.75, y: 0.175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5009211730862540637
@@ -488,6 +489,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2738878629577979934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2159064680842001241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 884493892be858b47a71d30edaebc03c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2607621672924874113
 GameObject:
   m_ObjectHideFlags: 0
@@ -849,6 +862,7 @@ GameObject:
   - component: {fileID: 5588308497274494870}
   - component: {fileID: 4918218568743398398}
   - component: {fileID: 6756691211400665498}
+  - component: {fileID: 3605901874739633459}
   m_Layer: 0
   m_Name: Symptom 2
   m_TagString: Untagged
@@ -873,7 +887,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0.25}
   m_SizeDelta: {x: 0.75, y: 0.175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5588308497274494870
@@ -970,6 +984,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3605901874739633459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4748248061046409981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 173a14e4948c8504698d49c81d47b488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Symptom: Disorganized behavior
+  SymptomCanvasScript: {fileID: 3515537621847307124}
 --- !u!1 &4868661565647172392
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,6 +1010,7 @@ GameObject:
   - component: {fileID: 1385306282435125125}
   - component: {fileID: 8180654998066225610}
   - component: {fileID: 7665508765312853221}
+  - component: {fileID: 161448329725770402}
   m_Layer: 0
   m_Name: Symptom 4
   m_TagString: Untagged
@@ -1006,7 +1035,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.25}
   m_SizeDelta: {x: 0.75, y: 0.175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1385306282435125125
@@ -1103,6 +1132,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &161448329725770402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4868661565647172392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 173a14e4948c8504698d49c81d47b488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Symptom: Incoherent speech
+  SymptomCanvasScript: {fileID: 3515537621847307124}
 --- !u!1 &5402933589899302146
 GameObject:
   m_ObjectHideFlags: 0
@@ -1115,6 +1158,7 @@ GameObject:
   - component: {fileID: 946290540450739160}
   - component: {fileID: 671665643295558599}
   - component: {fileID: 1037345569250551915}
+  - component: {fileID: 8536501678237980280}
   m_Layer: 0
   m_Name: Symptom 3
   m_TagString: Untagged
@@ -1139,7 +1183,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.25}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0.75, y: 0.175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &946290540450739160
@@ -1236,6 +1280,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8536501678237980280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5402933589899302146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 173a14e4948c8504698d49c81d47b488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Symptom: Catatonia
+  SymptomCanvasScript: {fileID: 3515537621847307124}
 --- !u!1 &5896214497294158073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1382,6 +1440,7 @@ GameObject:
   - component: {fileID: 4084023734384610736}
   - component: {fileID: 8917637930652038280}
   - component: {fileID: 1585534481064465288}
+  - component: {fileID: 2989858963775009439}
   m_Layer: 0
   m_Name: Symptom 1
   m_TagString: Untagged
@@ -1406,7 +1465,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.75}
+  m_AnchoredPosition: {x: 0, y: 0.5}
   m_SizeDelta: {x: 0.75, y: 0.175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4084023734384610736
@@ -1503,6 +1562,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2989858963775009439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6078195364129902161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 173a14e4948c8504698d49c81d47b488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Symptom: Agitation
+  SymptomCanvasScript: {fileID: 3515537621847307124}
 --- !u!1 &7317542310551599534
 GameObject:
   m_ObjectHideFlags: 0
@@ -1619,6 +1692,7 @@ GameObject:
   - component: {fileID: 4142352621916808742}
   - component: {fileID: 7435704218861921208}
   - component: {fileID: 1241910962222501927}
+  - component: {fileID: 6737279217761695105}
   m_Layer: 0
   m_Name: Symptom 5
   m_TagString: Untagged
@@ -1643,7 +1717,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.25}
+  m_AnchoredPosition: {x: 0, y: -0.5}
   m_SizeDelta: {x: 0.75, y: 0.175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4142352621916808742
@@ -1740,6 +1814,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6737279217761695105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8287493449144337032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 173a14e4948c8504698d49c81d47b488, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Symptom: Reduced social engagement
+  SymptomCanvasScript: {fileID: 3515537621847307124}
 --- !u!1 &8406804215092462420
 GameObject:
   m_ObjectHideFlags: 0
@@ -1883,8 +1971,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 889804775784055551}
+  - component: {fileID: 3515537621847307124}
   m_Layer: 0
-  m_Name: P_SymptomsDropdown
+  m_Name: P_SymptomsSelector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1907,3 +1996,15 @@ Transform:
   - {fileID: 1542916190122305533}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3515537621847307124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9065777903272620215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3dacb0c440b9734c8716f893d915126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

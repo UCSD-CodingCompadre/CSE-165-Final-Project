@@ -10,6 +10,9 @@ public class S_SymptomButtonManager : MonoBehaviour
     // Hold the name of the symptom
     public string Symptom;
 
+    // Hold a reference to S_SymptomCanvasManager script
+    public S_SymptomCanvasManager SymptomCanvasScript; 
+
     // Hold a reference to the default color 
     private Color DefaultColor = new Color(0f, 0f, 1f); 
 
@@ -97,6 +100,9 @@ public class S_SymptomButtonManager : MonoBehaviour
 
             // Change the Image color 
             ButtonImage.color = SelectedColor;
+
+            // Add the symptom 
+            SymptomCanvasScript.AddSelectedSymptom(Symptom);
         }
 
         // Else the button is selected
@@ -108,6 +114,9 @@ public class S_SymptomButtonManager : MonoBehaviour
 
             // Change the Image color
             ButtonImage.color = DefaultColor;
+
+            // Remove the symptom
+            SymptomCanvasScript.RemoveSelectedSymptom(Symptom);
         }
     }
 }

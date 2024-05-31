@@ -15,8 +15,8 @@ public class S_SceneManager : MonoBehaviour
     // Hold a reference to the Camera Offset Gameobject from the AR rig
     public GameObject RigCameraOffset;
 
-    // Hold a reference to the MessageBoard prefab
-    public GameObject MessageBoardPrefab;
+    // Hold a reference to the MessageBoard 
+    public GameObject MessageBoard;
 
     // Hold a reference to Jeff
     public GameObject Jeff;
@@ -24,8 +24,8 @@ public class S_SceneManager : MonoBehaviour
     // Hold a reference to the Scanner prefab
     public GameObject Scanner;
 
-    // Hold a reference to the current UI element
-    private GameObject CurrentUIElement;
+    // Hold a reference to the SymptomSelector prefab
+    public GameObject SymptomsSelectorPrefab;
 
     // Hold a reference to the current objective
     private GameObject CurrentObjective;
@@ -41,18 +41,15 @@ public class S_SceneManager : MonoBehaviour
     void Start()
     {
 
-        // Spawn the message board
-        SpawnUIPrefab(MessageBoardPrefab, new Vector3(0, .25f, .75f));
-
         // Set the first messasge
         SetMessageBoardText("Help Jeff! Grab the scanner using the grip buttons. Follow the arrow to your backpack.");
 
-        // Set the first objective
-        SetNextObjective(Scanner);
+        // Spawn the Scanner
+        SpawnBackPackpackItem(Scanner);
     }
 
     /*
-     * @brief Spawn the specific UI prefab at a location
+     * @brief Spawn the specific UI prefab at the UI interaction location
      * @param GameObject Prefab the prefrab being spawned
      * Vector3 Position the location to spawn the prefab
      * @return void
@@ -61,11 +58,22 @@ public class S_SceneManager : MonoBehaviour
     {
 
         // Instantiate the prefab at the specified position
-        CurrentUIElement = Instantiate(Prefab, RigCameraOffset.transform);
-
-        // Set the location relative to the camera offset
-        CurrentUIElement.transform.localPosition = Position;
+        CurrentObjective = Instantiate(Prefab);
     }
+
+    /*
+     * @brief Spawn the specific objective at the backpack
+     * @param GameObject Prefab the prefrab being spawned
+     * Vector3 Position the location to spawn the prefab
+     * @return void
+     */
+    public void SpawnBackPackpackItem(GameObject Prefab)
+    {
+
+        // Set the new objective
+        CurrentObjective = ItemSpawnerScript.SpawnObjectAtTransform(Prefab);
+    }
+    
 
     /*
      * @brief Change the TextMeshPro text 
@@ -74,6 +82,7 @@ public class S_SceneManager : MonoBehaviour
      */
     public void SetMessageBoardText(string Text)
     {
+<<<<<<< Updated upstream
         
         CurrentUIElement.GetComponentInChildren<TextMeshProUGUI>(false).text = Text;
     }
@@ -106,6 +115,11 @@ public class S_SceneManager : MonoBehaviour
 
         // Set to null
         CurrentObjective = null;
+=======
+
+        // Set the text for MessageBoard
+        MessageBoard.GetComponent<TextMeshProUGUI>().text = Text;
+>>>>>>> Stashed changes
     }
 
     /*
@@ -113,11 +127,8 @@ public class S_SceneManager : MonoBehaviour
      * @param GameObject the next objective
      * @return void
      */
-    public void SetNextObjective(GameObject Objective)
+    public void SetWayfinding()
     {
-
-        // Set the new objective
-        CurrentObjective = ItemSpawnerScript.SpawnObjectAtTransform(Objective);
 
         // Set the wayfinding 
         WayfindingScript.SetActiveObject(CurrentObjective);
@@ -150,8 +161,11 @@ public class S_SceneManager : MonoBehaviour
             // User must scan Jeff
             case 2:
 
-                // Set the wayfinding to Jeff
-                WayfindingScript.SetActiveObject(Jeff);
+                // Set the current objective to Jeff
+                CurrentObjective = Jeff;
+
+                // Update the wayfinding 
+                SetWayfinding();
 
                 // Change message on Message board
                 SetMessageBoardText("Quickly! Scan Jeff to see what is wrong!");
@@ -161,7 +175,11 @@ public class S_SceneManager : MonoBehaviour
 
             // User must select symptoms from a dropdown menu
             case 3:
-                // Logic for checkpoint 3
+
+                // Update the wayfinding 
+                SetWayfinding();
+
+
                 break;
             case 4:
                 // Logic for checkpoint 4

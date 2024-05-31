@@ -29,6 +29,9 @@ public class S_JeffManager : MonoBehaviour
 
             // Increment the checkpoint
             SceneManager.IncrementCheckpoint();
+
+            // Destroy the item
+            Destroy(CollidingObject);
         }
     }
 }
