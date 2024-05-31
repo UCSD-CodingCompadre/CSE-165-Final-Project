@@ -156,7 +156,10 @@ public class S_SceneManager : MonoBehaviour
                 // Change message on Message board
                 SetMessageBoardText("Quickly! Scan Jeff to see what is wrong!");
 
+                // Break
                 break;
+
+            // User must select symptoms from a dropdown menu
             case 3:
                 // Logic for checkpoint 3
                 break;
