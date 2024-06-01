@@ -27,6 +27,12 @@ public class S_SceneManager : MonoBehaviour
     // Hold a reference to the SymptomSelector prefab
     public GameObject SymptomsSelectorPrefab;
 
+    // Hold a reference to the OtherSymptomsTextInput prefab
+    public GameObject OtherSymptomsTextInputPrefab;
+
+    // Hold a reference to the location to place the other UIs
+    public Transform UILocation;
+
     // Hold a reference to the current objective
     private GameObject CurrentObjective;
 
@@ -58,7 +64,7 @@ public class S_SceneManager : MonoBehaviour
     {
 
         // Instantiate the prefab at the specified position
-        CurrentObjective = Instantiate(Prefab);
+        CurrentObjective = Instantiate(Prefab, Position, Quaternion.identity);
     }
 
     /*
@@ -141,13 +147,31 @@ public class S_SceneManager : MonoBehaviour
             // User must select symptoms from a dropdown menu
             case 3:
 
+                // Spawn the SymptomSelector
+                SpawnUIPrefab(SymptomsSelectorPrefab, UILocation.position);
+
                 // Update the wayfinding 
                 SetWayfinding();
 
+                // Change message on Message board
+                SetMessageBoardText("Press on the symptoms you see. Then press Done.");
 
+                // Break
                 break;
             case 4:
-                // Logic for checkpoint 4
+
+                // Destroy the SymptomSelector
+                Destroy(CurrentObjective);
+
+                // Spawn the OtherSymptomsTextInput 
+                SpawnUIPrefab(OtherSymptomsTextInputPrefab, UILocation.position);
+
+                // Update the wayfinding
+                SetWayfinding();
+
+                // Change message on Message board
+                SetMessageBoardText("Type out any other symptoms.");
+                
                 break;
             case 5:
                 // Logic for checkpoint 5
