@@ -24,7 +24,7 @@ public class S_Teleport : MonoBehaviour
             other.gameObject.transform.position = teleportLocation;
 
             // turn controller on
-            other.gameObject.GetComponent<CharacterController>().enabled = false;
+            other.gameObject.GetComponent<CharacterController>().enabled = true;
         }
     }
 }
