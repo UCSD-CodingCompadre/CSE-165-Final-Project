@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Scanner
+  - floor
   layers:
   - Default
   - TransparentFX

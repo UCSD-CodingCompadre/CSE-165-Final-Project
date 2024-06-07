@@ -9,7 +9,7 @@ public class S_JeffManager : MonoBehaviour
     public S_SceneManager SceneManager;
 
     // Hold a reference to the TriggeredTags
-    private List<string> TriggeredTags = new List<string>();
+    public List<string> TriggeredTags = new List<string>();
 
     /*
      * @brief OnTriggerEnter check if a tag is contained
