@@ -24,6 +24,15 @@ public class S_SceneManager : MonoBehaviour
     // Hold a reference to the Scanner prefab
     public GameObject Scanner;
 
+    // Hold a reference to the Pills prefab
+    public GameObject Pills;
+
+    // Hold a reference to the Virtual Reality Headset
+    public GameObject VRHeadset;
+
+    // Hold a reference to the Pulse Oximeter
+    public GameObject PulseOximeter;
+
     // Hold a reference to the SymptomSelector prefab
     public GameObject SymptomsSelectorPrefab;
 
@@ -44,7 +53,7 @@ public class S_SceneManager : MonoBehaviour
      * @param none
      * @return void
      */
-    void Start()
+    private void Start()
     {
 
         // Set the first messasge
@@ -90,7 +99,7 @@ public class S_SceneManager : MonoBehaviour
     {
 
         // Set the text for MessageBoard
-        MessageBoard.GetComponentInChildren<TextMeshProUGUI>().text = Text;
+        MessageBoard.GetComponent<TextMeshProUGUI>().text = Text;
     }
 
     /*
@@ -158,6 +167,8 @@ public class S_SceneManager : MonoBehaviour
 
                 // Break
                 break;
+
+            // User must type out the other symptoms
             case 4:
 
                 // Destroy the SymptomSelector
@@ -172,12 +183,101 @@ public class S_SceneManager : MonoBehaviour
                 // Change message on Message board
                 SetMessageBoardText("Type out any other symptoms.");
                 
+                // Break
                 break;
+            
+            // User must grab the pills
             case 5:
-                // Logic for checkpoint 5
+
+
+                // Destroy the Symptom Keyboard
+                Destroy(CurrentObjective);
+
+                // Spawn the pills
+                SpawnBackPackpackItem(Pills);
+
+                // Update the wayfinding
+                SetWayfinding();
+
+                // Change message on Message board
+                SetMessageBoardText("Jeff is experiencing drug induced psychosis! Grab the pills to calm him down.");
+
+                // Break
                 break;
+
+            // User must give Jeff the pills
             case 6:
+
+                // Set the current objective to Jeff
+                CurrentObjective = Jeff;
+
+                // Update the wayfinding 
+                SetWayfinding();
+
+                // Change message on Message board
+                SetMessageBoardText("Give Jeff the pills.");
+
                 // Logic for checkpoint 6
+                break;
+
+            // User must grab the Virtual Reality Headset
+            case 7:
+
+                // Spawn the Virtual Reality Headset
+                SpawnBackPackpackItem(VRHeadset);
+
+                // Update the wayfinding
+                SetWayfinding();
+
+                // Change message on Message board
+                SetMessageBoardText("Jeff needs to change his enviroment so he can calm down. Grab the Virtual Reality Headset on the backpack.");
+
+                // Break
+                break;
+
+            // User must hand the Virtual Reality Headset to Jeff
+            case 8:
+
+                // Set the current objective to Jeff
+                CurrentObjective = Jeff;
+
+                // Update the wayfinding 
+                SetWayfinding();
+
+                // Change message on Message board
+                SetMessageBoardText("Give Jeff the Virtual Reality Headset.");
+
+                // Break
+                break;
+
+            // User must grab the Pulse Oximeter
+            case 9:
+
+                // Spawn the pills
+                SpawnBackPackpackItem(PulseOximeter);
+
+                // Update the wayfinding
+                SetWayfinding();
+
+                // Change message on Message board
+                SetMessageBoardText("While Jeff is in his Virtual Reality we need to scan his vitals. Grab the Pulse Oximeter from the backpack.");
+
+                // Break
+                break;
+
+            // User must hand the Virtual Reality Headset to Jeff
+            case 10:
+
+                // Set the current objective to Jeff
+                CurrentObjective = Jeff;
+
+                // Update the wayfinding 
+                SetWayfinding();
+
+                // Change message on Message board
+                SetMessageBoardText("Jeff is recovering. He will be okay.");
+
+                // Break
                 break;
         }
     }

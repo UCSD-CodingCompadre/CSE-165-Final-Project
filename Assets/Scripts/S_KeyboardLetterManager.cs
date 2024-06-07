@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class S_KeyboardLetterManager : MonoBehaviour
+public class S_KeyboardLetterManager : XRBaseInteractable
 {
 
     // Hold a reference to the character to append
@@ -17,7 +17,7 @@ public class S_KeyboardLetterManager : MonoBehaviour
      * @param SelectEnterEventArgs arguements used for the Select Enter event
      * @return void
      */
-    public void OnSelectEntered(SelectEnterEventArgs args)
+    protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
 
         // Add a letter to the text input

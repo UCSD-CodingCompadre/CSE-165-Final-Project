@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class S_SymptomButtonManager : MonoBehaviour
+public class S_SymptomButtonManager : XRBaseInteractable
 {
 
     // Hold the name of the symptom
@@ -24,9 +24,6 @@ public class S_SymptomButtonManager : MonoBehaviour
 
     // Hold a reference to the Image component
     private Image ButtonImage;
-
-    // Hold a reference to the XRDirectInteractor component
-    private XRDirectInteractor DirectInteractor;
     
     // Hold a flag to check if the button was been selected
     private bool IsSelected = false;
@@ -41,18 +38,15 @@ public class S_SymptomButtonManager : MonoBehaviour
 
         // Set the Image component
         ButtonImage = GetComponent<Image>();
-        
-        // Set the XRDirectInteractor component
-        DirectInteractor = GetComponent<XRDirectInteractor>();
     }
 
     /*
-     * @brief OnPointerEnter check if the button is not selected and show the
+     * @brief OnHoverEnter check if the button is not selected and show the
      * hovered color
      * @param none
      * @return void
      */
-    public void OnPointerEnter()
+    protected override void OnHoverEntered(HoverEnterEventArgs args)
     {
 
         // Check if the button is not selected
@@ -65,12 +59,12 @@ public class S_SymptomButtonManager : MonoBehaviour
     }
 
     /*
-     * @brief OnPointerExit check if the button is not selected and show the
+     * @brief OnHoverExited check if the button is not selected and show the
      * default color
      * @param none
      * @return void
      */
-    public void OnPointerExit()
+    protected override void OnHoverExited(HoverExitEventArgs args)
     {
 
         // Check if the button is not selected
@@ -88,7 +82,7 @@ public class S_SymptomButtonManager : MonoBehaviour
      * @param SelectEnterEventArgs args the arguements for the SelectEnter event
      * @return void
      */
-    public void OnSelectEntered(SelectEnterEventArgs args)
+    protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
 
         // Check if the button has not been selected

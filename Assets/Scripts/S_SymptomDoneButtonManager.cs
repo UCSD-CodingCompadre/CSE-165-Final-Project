@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class S_SymptomDoneButtonManager : MonoBehaviour
+public class S_SymptomDoneButtonManager : XRBaseInteractable
 {
 
     // Hold a reference to the S_SceneManager script
@@ -14,11 +14,11 @@ public class S_SymptomDoneButtonManager : MonoBehaviour
      * @param none
      * @return void
      */
-    void Start()
+    private void Start()
     {
         
         // Set the SceneManager script
-        SceneManagerScript = GameObject.Find("GameManager").GetComponent<S_SceneManager>();
+        SceneManagerScript = GameObject.Find("SceneManager").GetComponent<S_SceneManager>();
     }
 
     /*
@@ -28,7 +28,7 @@ public class S_SymptomDoneButtonManager : MonoBehaviour
      * event
      * @return void
      */
-    public void OnSelectEntered(SelectEnterEventArgs args)
+    protected override void OnSelectEntered(SelectEnterEventArgs args)
     {
 
         // Call the IncrementCheckpoint method
