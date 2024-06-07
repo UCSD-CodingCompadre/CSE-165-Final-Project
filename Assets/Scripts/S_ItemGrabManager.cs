@@ -16,20 +16,8 @@ public class S_ItemGrabManager : XRBaseInteractable
     // Hold a flag to prevent another checkpoint increment
     private bool WasGrabbed = false;
 
-    // Hold the hover material
-    public Material HoverMaterial;
-
-    // Hold the select Material
-    public Material SelectMaterial;
-
-    // Hold the MeshRenderer component for the interactable
-    private Renderer ObjectRenderer;
-
     // Hold the Transform component for the interactable
     private Transform ObjectTransform;
-
-    // Hold the original Material list
-    private List<Material> OriginalMaterials = new List<Material>();
 
     /*
      * @brief On start set the SceneManager script 
@@ -57,14 +45,8 @@ public class S_ItemGrabManager : XRBaseInteractable
         // Call the base method
         base.Awake();
 
-        // Get the MeshRenderer component from the object
-        ObjectRenderer = GetComponent<Renderer>();
-
         // Get the Transform component from the object
         ObjectTransform = GetComponent<Transform>();
-
-        // Store the original materials
-        OriginalMaterials.AddRange(ObjectRenderer.materials);
 
         // Return
         return;
@@ -81,9 +63,6 @@ public class S_ItemGrabManager : XRBaseInteractable
         // Call the base method 
         base.OnHoverEntered(args);
 
-        // Add the new Materials list
-        ObjectRenderer.materials = new Material[] { OriginalMaterials[0], HoverMaterial };
-
         // Return
         return;
     }
@@ -98,9 +77,6 @@ public class S_ItemGrabManager : XRBaseInteractable
 
         // Call the base method
         base.OnHoverExited(args);
-
-        // Remove the hover material from the list
-        ObjectRenderer.materials = OriginalMaterials.ToArray();
 
         // Return
         return;
@@ -143,9 +119,6 @@ public class S_ItemGrabManager : XRBaseInteractable
         // Call the base method
         base.OnSelectExited(args);
 
-        // Remove the hover material from the list
-        ObjectRenderer.materials = OriginalMaterials.ToArray();
-
         // Start the coroutine function
         StopCoroutine(HandleGrabInteraction());
 
@@ -164,9 +137,6 @@ public class S_ItemGrabManager : XRBaseInteractable
         // Loop until there is no interactor
         while (firstInteractorSelecting != null)
         {
-
-            // Add the new Materials list
-            ObjectRenderer.materials = new Material[] { OriginalMaterials[0], SelectMaterial };
 
             // Calculate the new position of the object
             Vector3 newPosition = firstInteractorSelecting.transform.position + firstInteractorSelecting.transform.forward * 3.0f;
