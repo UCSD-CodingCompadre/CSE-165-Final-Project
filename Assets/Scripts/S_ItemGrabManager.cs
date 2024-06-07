@@ -95,10 +95,10 @@ public class S_ItemGrabManager : XRBaseInteractable
         base.OnSelectEntered(args);
 
         // Check if this is the first time the item was grabbed
-        if (!WasGrabbed) SceneManagerScript.IncrementCheckpoint();
+        //if (!WasGrabbed) SceneManagerScript.IncrementCheckpoint();
 
         // Set to true
-        WasGrabbed = true;
+        //WasGrabbed = true;
 
         // Start the coroutine function
         StartCoroutine(HandleGrabInteraction());

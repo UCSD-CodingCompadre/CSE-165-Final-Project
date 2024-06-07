@@ -99,7 +99,7 @@ public class S_SceneManager : MonoBehaviour
     {
 
         // Set the text for MessageBoard
-        MessageBoard.GetComponent<TextMeshProUGUI>().text = Text;
+        MessageBoard.GetComponentInChildren<TextMeshProUGUI>().text = Text;
     }
 
     /*
