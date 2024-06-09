@@ -15,10 +15,10 @@ public class S_ARMovementManager : MonoBehaviour
     private Transform TransformComponent;
 
     // Hold the move speed of the character
-    private float MoveSpeed = 5.0f;
+    private float MoveSpeed = 3.0f;
 
     // Hold the rotate speed of the character
-    private float RotationSpeed = 90.0f;
+    private float RotationSpeed = 120.0f;
 
     /*
      * @brief On start set the components

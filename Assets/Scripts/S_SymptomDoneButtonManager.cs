@@ -28,7 +28,8 @@ public class S_SymptomDoneButtonManager : XRBaseInteractable
      * event
      * @return void
      */
-    protected override void OnSelectEntered(SelectEnterEventArgs args)
+    //protected override void OnSelectEntered(SelectEnterEventArgs args)
+    public void buttonSelect()
     {
 
         // Call the IncrementCheckpoint method

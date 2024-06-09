@@ -494,6 +494,7 @@ MonoBehaviour:
       m_Calls: []
   Character: W
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &194628111661906419
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,11 +658,7 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0, g: 0, b: 0, a: 0.7529412}
-  m_Text: '
-
-
-
-'
+  m_Text: 
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
@@ -899,6 +896,7 @@ MonoBehaviour:
       m_Calls: []
   Character: L
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &203926209038443036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,6 +1257,7 @@ MonoBehaviour:
       m_Calls: []
   Character: P
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &534770390756610921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1485,6 +1484,7 @@ MonoBehaviour:
       m_Calls: []
   Character: J
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &673103497352173429
 GameObject:
   m_ObjectHideFlags: 0
@@ -1979,6 +1979,7 @@ MonoBehaviour:
       m_Calls: []
   Character: H
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &1082421414757175276
 GameObject:
   m_ObjectHideFlags: 0
@@ -2339,6 +2340,7 @@ MonoBehaviour:
       m_Calls: []
   Character: M
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &1246164102369651431
 GameObject:
   m_ObjectHideFlags: 0
@@ -2699,6 +2701,7 @@ MonoBehaviour:
       m_Calls: []
   Character: X
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &1499396327483647323
 GameObject:
   m_ObjectHideFlags: 0
@@ -3509,6 +3512,7 @@ MonoBehaviour:
       m_Calls: []
   Character: C
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &2229351995737837947
 GameObject:
   m_ObjectHideFlags: 0
@@ -3574,7 +3578,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\n\n\n\u200B"
+  m_text: "\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3583,8 +3587,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4289705902
+  m_fontColor: {r: 0.68316126, g: 0.7169812, b: 0.6852412, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4107,6 +4111,7 @@ MonoBehaviour:
       m_Calls: []
   Character: U
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &2538379647530937054
 GameObject:
   m_ObjectHideFlags: 0
@@ -4467,6 +4472,7 @@ MonoBehaviour:
       m_Calls: []
   Character: N
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &2588543123958335204
 GameObject:
   m_ObjectHideFlags: 0
@@ -4693,6 +4699,7 @@ MonoBehaviour:
       m_Calls: []
   Character: B
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &2716067979555837343
 GameObject:
   m_ObjectHideFlags: 0
@@ -4919,6 +4926,7 @@ MonoBehaviour:
       m_Calls: []
   Character: S
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &2741363378323287070
 GameObject:
   m_ObjectHideFlags: 0
@@ -5413,6 +5421,7 @@ MonoBehaviour:
       m_Calls: []
   Character: E
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &3351449984003535580
 GameObject:
   m_ObjectHideFlags: 0
@@ -5907,6 +5916,7 @@ MonoBehaviour:
       m_Calls: []
   Character: F
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &4106878468936817371
 GameObject:
   m_ObjectHideFlags: 0
@@ -6133,6 +6143,7 @@ MonoBehaviour:
       m_Calls: []
   Character: Z
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &4276796755572089495
 GameObject:
   m_ObjectHideFlags: 0
@@ -6405,6 +6416,7 @@ MonoBehaviour:
       m_Calls: []
   Character: V
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &4375096213340330654
 GameObject:
   m_ObjectHideFlags: 0
@@ -6631,6 +6643,7 @@ MonoBehaviour:
       m_Calls: []
   Character: T
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &4376538968814858887
 GameObject:
   m_ObjectHideFlags: 0
@@ -6991,6 +7004,7 @@ MonoBehaviour:
       m_Calls: []
   Character: G
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &4429577648063967841
 GameObject:
   m_ObjectHideFlags: 0
@@ -7217,6 +7231,7 @@ MonoBehaviour:
       m_Calls: []
   Character: D
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &4635670842711044654
 GameObject:
   m_ObjectHideFlags: 0
@@ -7936,6 +7951,7 @@ MonoBehaviour:
       m_Calls: []
   Character: K
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &5829183858589596423
 GameObject:
   m_ObjectHideFlags: 0
@@ -8162,6 +8178,7 @@ MonoBehaviour:
       m_Calls: []
   Character: A
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &5900837015497271856
 GameObject:
   m_ObjectHideFlags: 0
@@ -8522,6 +8539,7 @@ MonoBehaviour:
       m_Calls: []
   Character: Y
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &6082866624725355295
 GameObject:
   m_ObjectHideFlags: 0
@@ -8825,6 +8843,7 @@ MonoBehaviour:
       m_Calls: []
   Character: R
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &6394008599259907521
 GameObject:
   m_ObjectHideFlags: 0
@@ -10042,7 +10061,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7594732277644067374}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
@@ -10674,6 +10693,7 @@ MonoBehaviour:
       m_Calls: []
   Character: Q
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &8468929963854553739
 GameObject:
   m_ObjectHideFlags: 0
@@ -11035,6 +11055,7 @@ MonoBehaviour:
       m_Calls: []
   Character: I
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &8804420859653491808
 GameObject:
   m_ObjectHideFlags: 0
@@ -11395,6 +11416,7 @@ MonoBehaviour:
       m_Calls: []
   Character: O
   TextInputScript: {fileID: 784788743471082094}
+  letter: {fileID: 0}
 --- !u!1 &8919612694774131460
 GameObject:
   m_ObjectHideFlags: 0

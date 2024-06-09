@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 8490491157076490802}
   m_Layer: 0
   m_Name: P_Pills
-  m_TagString: Untagged
+  m_TagString: pills
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -341,5 +341,3 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  HoverMaterial: {fileID: 0}
-  SelectMaterial: {fileID: 0}

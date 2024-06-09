@@ -95,10 +95,10 @@ public class S_ItemGrabManager : XRBaseInteractable
         base.OnSelectEntered(args);
 
         // Check if this is the first time the item was grabbed
-        //if (!WasGrabbed) SceneManagerScript.IncrementCheckpoint();
+        if (!WasGrabbed) SceneManagerScript.IncrementCheckpoint();
 
         // Set to true
-        //WasGrabbed = true;
+        WasGrabbed = true;
 
         // Start the coroutine function
         StartCoroutine(HandleGrabInteraction());
@@ -139,7 +139,7 @@ public class S_ItemGrabManager : XRBaseInteractable
         {
 
             // Calculate the new position of the object
-            Vector3 newPosition = firstInteractorSelecting.transform.position + firstInteractorSelecting.transform.forward * 3.0f;
+            Vector3 newPosition = firstInteractorSelecting.transform.position + firstInteractorSelecting.transform.forward * .5f;
 
             // Set the new position of the object
             ObjectTransform.position = newPosition;

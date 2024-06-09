@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Scanner
   - floor
+  - hands
+  - vr headset
+  - pills
+  - pulse
   layers:
   - Default
   - TransparentFX

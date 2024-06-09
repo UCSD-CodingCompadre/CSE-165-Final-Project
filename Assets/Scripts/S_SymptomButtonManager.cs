@@ -82,7 +82,8 @@ public class S_SymptomButtonManager : XRBaseInteractable
      * @param SelectEnterEventArgs args the arguements for the SelectEnter event
      * @return void
      */
-    protected override void OnSelectEntered(SelectEnterEventArgs args)
+    //protected override void OnSelectEntered(SelectEnterEventArgs args)
+    public void buttonSelect()
     {
 
         // Check if the button has not been selected
