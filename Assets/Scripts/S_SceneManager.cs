@@ -50,7 +50,7 @@ public class S_SceneManager : MonoBehaviour
     private int Checkpoint = 1;
 
     // Hold a reference to the bool array
-    private bool[] CheckpointList = new bool[10];
+    private bool[] CheckpointList = new bool[11];
 
     /*
      * @brief On start set up the first message 
@@ -294,7 +294,11 @@ public class S_SceneManager : MonoBehaviour
                     break;
                 case 11:
                     //Load next scene after this scene (can find scene order in build settings)
-                    StartCoroutine(LoadYourAsyncScene());
+                    //StartCoroutine(LoadYourAsyncScene());
+
+                    //IncrementCheckpoint();
+                    //SceneManager.LoadScene("optional VR");
+                    
                     break;
             }
             // Set the checkpoint to true
@@ -309,13 +313,16 @@ public class S_SceneManager : MonoBehaviour
         // You could also load the Scene by using sceneBuildIndex. In this case Scene2 has
         // a sceneBuildIndex of 1 as shown in Build Settings.
 
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(1);
-
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync("optional VR", LoadSceneMode.Single);
+        asyncLoad.allowSceneActivation = false;
         // Wait until the asynchronous scene fully loads
-        while (!asyncLoad.isDone)
+        while (asyncLoad.progress < 0.9f)
         {
+            Debug.Log("Loading progress: " + (asyncLoad.progress * 100) + " % ");
             yield return null;
         }
+        Debug.Log("Setting allow scene to true");
+        asyncLoad.allowSceneActivation = true;
     }
 }
 

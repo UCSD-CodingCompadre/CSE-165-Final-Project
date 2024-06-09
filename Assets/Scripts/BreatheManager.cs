@@ -40,6 +40,7 @@ public class BreatheManager : MonoBehaviour
         sliderText.text = string.Format("{0}",countdown);
         breatheSlider.maxValue = breatheMax;
         breatheSlider.minValue = 0;
+        sliderText.color = new Color(255f,255f,255f);
     }
 
     // Update is called once per frame
